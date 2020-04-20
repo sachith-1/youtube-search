@@ -14,14 +14,14 @@ class SearchBar extends Component {
       <div className=" row mt-5 mx-auto">
         <div className="col-12 d-flex justify-content-center">
           <form
-            className="col-8"
+            className="container"
             onSubmit={(e) => {
               e.preventDefault();
               this.onDataSubmit();
             }}
           >
-            <div className="row ml-md-5">
-              <div className="col-9" style={{ paddingRight: 1 }}>
+            <div className="row">
+              <div class="input-group mb-3">
                 <input
                   type="text"
                   name="search"
@@ -36,19 +36,19 @@ class SearchBar extends Component {
                     });
                   }}
                 />
-              </div>
-              <div className="col-3" style={{ paddingLeft: 0 }}>
-                <button
-                  type="button"
-                  className="btn btn-danger"
-                  style={{
-                    width: 100,
-                    borderRadius: "0 .9rem .9rem 0",
-                  }}
-                  onClick={this.onDataSubmit}
-                >
-                  Search
-                </button>
+                <div class="input-group-append">
+                  <button
+                    type="button"
+                    className="btn btn-danger"
+                    style={{
+                      width: 100,
+                      borderRadius: "0 .9rem .9rem 0",
+                    }}
+                    onClick={this.onDataSubmit}
+                  >
+                    Search
+                  </button>
+                </div>
               </div>
             </div>
           </form>

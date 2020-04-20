@@ -17,7 +17,7 @@ class VideoPlayer extends React.Component {
             ></iframe>
           </div>
           <div className="row ">
-            <div className="col d-flex justify-content-center">
+            <div className="col d-flex justify-content-center mb-2">
               <iframe
                 id="videodownload"
                 title="download"
@@ -31,7 +31,7 @@ class VideoPlayer extends React.Component {
                 src={`https://loader.to/api/button/?url=https://www.youtube.com/watch?v=${this.props.video.id.videoId}&f=mp3`}
               ></iframe>
             </div>
-            <div className="col d-flex justify-content-center">
+            <div className="col d-flex justify-content-center mb-2">
               <iframe
                 id="videodownload"
                 title="download"
@@ -45,7 +45,7 @@ class VideoPlayer extends React.Component {
                 src={`https://loader.to/api/button/?url=https://www.youtube.com/watch?v=${this.props.video.id.videoId}&f=720`}
               ></iframe>
             </div>
-            <div className="col d-flex justify-content-center">
+            <div className="col d-flex justify-content-center mb-2">
               <iframe
                 id="videodownload"
                 title="download"
