@@ -26,7 +26,7 @@ class SearchBar extends Component {
                   type="text"
                   name="search"
                   id="search"
-                  placeholder="Search..."
+                  placeholder="Enter youtube url or Search videos..."
                   className="form-control"
                   style={{ borderRadius: ".9rem 0 0 .9rem" }}
                   value={this.state.searchValue}
