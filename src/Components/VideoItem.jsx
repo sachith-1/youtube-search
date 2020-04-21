@@ -12,7 +12,7 @@ class VideoItem extends React.Component {
         className="card my-2"
         style={{
           cursor: "pointer",
-          backgroundColor: "#363638",
+          backgroundColor: "#363638c0",
           color: "#E7DFdd",
         }}
       >

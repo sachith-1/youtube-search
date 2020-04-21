@@ -21,14 +21,14 @@ class SearchBar extends Component {
             }}
           >
             <div className="row">
-              <div class="input-group mb-3">
+              <div className="input-group mb-3">
                 <input
                   type="text"
                   name="search"
                   id="search"
                   placeholder="Enter youtube url or Search videos..."
                   className="form-control"
-                  style={{ borderRadius: ".9rem 0 0 .9rem" }}
+                  style={{ borderRadius: ".25rem 0 0 .25rem" }}
                   value={this.state.searchValue}
                   onChange={(e) => {
                     this.setState({ searchValue: e.target.value }, () => {
@@ -36,13 +36,15 @@ class SearchBar extends Component {
                     });
                   }}
                 />
-                <div class="input-group-append">
+                <div className="input-group-append">
                   <button
                     type="button"
-                    className="btn btn-danger"
+                    className="btn"
                     style={{
                       width: 100,
-                      borderRadius: "0 .9rem .9rem 0",
+                      borderRadius: "0 .25rem .25rem 0",
+                      backgroundColor: "#463c46b0",
+                      color: "white",
                     }}
                     onClick={this.onDataSubmit}
                   >

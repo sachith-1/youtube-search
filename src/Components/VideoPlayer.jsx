@@ -5,7 +5,7 @@ class VideoPlayer extends React.Component {
     return (
       <div
         className="card "
-        style={{ backgroundColor: "#363638", color: "#E7DFdd" }}
+        style={{ backgroundColor: "#363638c0", color: "#E7DFdd" }}
       >
         <div className="card-body">
           <div className="embed-responsive embed-responsive-16by9 my-2">

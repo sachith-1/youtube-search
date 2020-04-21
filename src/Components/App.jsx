@@ -1,25 +1,46 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Particles from "react-particles-js";
+
 import SearchBar from "./SearchBar";
 import youtube from "./../Api/youtube";
 import Unsplash from "./../Api/Unsplash";
 import VideoList from "./VideoList";
 import VideoPlayer from "./VideoPlayer";
-
 class App extends React.Component {
   state = {
     searchData: "",
     videos: [],
     selectedVideo: [],
     marginTop: "20%",
-    backImageTerm: "black",
+    backImageTerm: "night sky",
     backImage: "",
   };
 
-  componentDidMount() {
-    this.backImage();
-  }
+  particlesCSS = {
+    position: "fixed",
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: -1,
+  };
 
+  particlesOptions = {
+    particles: {
+      number: {
+        value: 90,
+        density: {
+          enable: true,
+          value_area: 800,
+        },
+      },
+    },
+  };
+
+  componentDidMount() {
+    //this.backImage();
+  }
+  // random image from unsplash
   backImage = async () => {
     let randNum = Math.floor(Math.random() * 10);
     const backgroundImage = await Unsplash.get("/search/photos", {
@@ -84,6 +105,7 @@ class App extends React.Component {
             </div>
           </div>
         </section>
+        <Particles style={this.particlesCSS} params={this.particlesOptions} />;
       </div>
     );
   }
